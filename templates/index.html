@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:500,900,100,300,700,400|VT323|Overpass+Mono&display=swap">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/notARobot.css') }}">
+
+        <img id="logo" src="{{ url_for('static',filename='notARobotLogo.png') }}" alt="logo">
+    </head>
+    <body>
+        <div id="page">
+            <nav class="fill">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="upload.html">Image Detection</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        <h1>Welcome to Not A Robot!</h1>
+        <h2>Deep Fake Detector</h2>
+        <div id="homeContainer">
+            <img id = "homeImage" src="{{ url_for('static',filename='HomeImage.jpg') }}" alt="deepfake">
+            <p> In today's world, fake images can spread like wildfire online, and it is important to be able to tell 
+                what is real and what's not. Our system is designed specifically for individuals who want to check whether 
+                a face they see online is authentic or not. Simply upload the image in question, and our powerful algorithms 
+                will analyse the image to determine if the face is real or fake. 
+                <br><br>
+                Our team of expert developers are committed to providing the most reliable and effective deep fake detection 
+                available, and we are constantly working to improve our system. Protect yourself from the dangers of fake 
+                images with our advanced deep fake detection system. 
+            </p>
+        </div>
+    </div>
+    </body>
+    <footer>
+        <div class="footerContainer">
+            <div class="footer-info">
+                <h6>NOT A ROBOT</h6>
+                <p id="footerText">World's leading cutting-edge intelligent deep fake detector</p>
+            </div>
+            <div class="footer-links">
+                <h6>EXPLORE</h6>
+                <ul id="footerLinkText">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="upload.html">Image Detection</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h6>CONTACT</h6>
+                <p id="footerText"><a href="https://goo.gl/maps/PkCC26pqUeZbCh6F9">FEIT - UTS, 15 Broadway, Ultimo NSW 2007, Australia</a></p>
+                <p id="footerText"><a href="mailto:notarobot@gmail.com">notarobot@gmail.com</a></p>
+                <p id="footerText"><a href="tel:+61 1234 5678"> +61 1234 5678</a></p>
+            </div>       
+        </div>
+        <p id="copyright">© 2023 Copyright All Rights Reserved Not A Robot</p>
+    </footer>    
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:500,900,100,300,700,400|VT323|Overpass+Mono&display=swap">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/notARobot.css') }}">
+
+        <img id="logo" src="{{ url_for('static',filename='notARobotLogo.png') }}" alt="logo">
+    </head>
+    <body>
+        <div id="page">
+            <nav class="fill">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="upload.html">Image Detection</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>About Us</h1>
+            <div id="aboutContainer">
+                <p> Deepfakes are a form of synthetic media that use peep learning algorithms to create fake or 
+                    manipulated images, audio or video content This media can be very convincing, making it difficult 
+                    to distinguish between real and fake content. Deepfakes can be created using various techniques 
+                    such as face swapping, lip syncing, and puppeteering. They have become a growing concern as 
+                    they can be used to spread false information and impersonate individuals. Our deep learning 
+                    system is designed specifically to combat deepfakes by using object detection to determine 
+                    whether an image is real or fake.
+                    <br><br>
+                    Our AI model works by first running a facial detection model using OpenCV. The output of this model 
+                    is then fed into a convolutional neural network (CNN) which was trained to classify deep faked images. 
+                    The results are then recorded to the facial detection model which then applies bounding boxed and 
+                    labels to any faces found within the image. The model will return text on the image indicating if it 
+                    is “Real” or “Fake. 
+                </p>
+                <br><br>
+                <div id="aboutFeatures">
+                    <p id="feature1">
+                        <strong>Ability to detect multiple faces at once</strong>
+                        <br><br>
+                        Our model works by using facial recognition on any image submitted and running a deep fake detection 
+                        model on each face, allowing for multi-face detection.
+                    </p>
+                    <p id="feature2">
+                        <strong>Use images of any size</strong>
+                        <br><br><br>
+                        No resizing/rescaling required, as long as the face is clearly visible within the image our model will 
+                        extract and process it.
+                    </p>
+                    <p id="feature3">
+                        <strong>Accepts most file formats</strong>
+                        <br><br>
+                        Our model can accept a wide variety of formats including JPEG, PNG, BMP, WEBP, etc. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="footerContainer">
+            <div class="footer-info">
+                <h6>NOT A ROBOT</h6>
+                <p id="footerText">World's leading cutting-edge intelligent deep fake detector</p>
+            </div>
+            <div class="footer-links">
+                <h6>EXPLORE</h6>
+                <ul id="footerLinkText">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="upload.html">Image Detection</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h6>CONTACT</h6>
+                <p id="footerText"><a href="https://goo.gl/maps/PkCC26pqUeZbCh6F9">FEIT - UTS, 15 Broadway, Ultimo NSW 2007, Australia</a></p>
+                <p id="footerText"><a href="mailto:notarobot@gmail.com">notarobot@gmail.com</a></p>
+                <p id="footerText"><a href="tel:+61 1234 5678"> +61 1234 5678</a></p>
+            </div>       
+        </div>
+        <p id="copyright">© 2023 Copyright All Rights Reserved Not A Robot</p>
+    </footer>    
+</html>

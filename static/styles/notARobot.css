@@ -1,0 +1,357 @@
+html {
+    background-color: black;
+}
+body {
+    background-color: black;
+  }
+#page {
+    font-family: 'Overpass Mono', monospace;;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #0056b3, black);
+    padding-bottom: 30pt;
+}
+h1 {
+    color: white;
+    font-size: 32pt;
+    font-family: Courier New, monospace;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 20pt;
+}
+h2 {
+    color:white;
+    font-size: 22pt;
+    font-family: Courier New, monospace;
+    text-align: center;
+    font-weight: 500;
+}
+h3 {
+    color:white;
+    font-size: 20pt;
+    font-family: Courier New, monospace;
+    text-align: center;
+    font-weight: 500;
+}
+h4 {
+    color:white;
+    font-size: 20pt;
+    font-family: Courier New, monospace;
+    text-align: left;
+    font-weight: bold;
+}
+p{
+    color: white;
+    font-family: Courier New, monospace;
+    text-align: left;
+    font-size: 14pt;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* NAVIGATION */
+nav {
+    width: 100%;
+    margin: 0 auto;
+    background: black;
+    padding: 0px 0;
+    box-shadow: 0px 5px 0px #0056b3;
+    display: flex;
+    justify-content: space-between; 
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+nav ul li {
+    display: inline-block;
+    flex: 1 
+}
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+nav ul li a:hover {
+    color: #0056b3;
+} 
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: white;
+    height: 1px;
+}
+nav.stroke ul li a:hover:after {
+    width: 100%;
+}
+nav.fill ul li a {
+    transition: all 2s;
+} 
+nav.fill ul li a:after {
+    text-align: center;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+}
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+} 
+/* Keyframes */
+@-webkit-keyframes fill {
+0% {
+    width: 0%;
+    height: 1px;
+}
+50% {
+    width: 100%;
+    height: 1px;
+}
+100% {
+    width: 100%;
+    height: 100%;
+    background: #0056b3;
+}
+} 
+
+/* ------------------------------------------------------------------------------ */
+/* FOOTER */
+footer {
+    width: 100%;
+    background-color: #000000;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.footer-info,
+.footer-links,
+.footer-contact {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+    padding-top: 20px; 
+}
+.footer-info h6,
+.footer-links h6,
+.footer-contact h6,
+#footerText a {
+    color: white;
+    font-family: Courier New, monospace;
+    font-size: 11pt;
+    text-decoration: none;
+    margin-top: 0; 
+}
+#footerText {
+    color: white;
+    font-family: Courier New, monospace;
+    text-align: left;
+    font-size: 11pt;
+    margin-top: 10px;
+}
+#footerLinkText {
+    color: white;
+    font-family: Courier New, monospace;
+    text-align: left;
+    font-size: 11pt;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#footerLinkText li {
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+#footerLinkText li a {
+    color: white;
+    text-decoration: none;
+}
+#copyright{
+    color: white;
+    font-family: Courier New, monospace;
+    text-align: center;
+    font-size: 11pt;
+    justify-content: center;
+    padding-bottom: 10pt;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* HOME PAGE */
+#homeContainer {
+    display: flex;
+    align-items: center;
+    padding-top: 30pt;
+    padding-left: 50pt;
+    padding-right: 50pt;
+    padding-bottom: 60pt;
+  }
+#homeImage {
+    max-width: 50%;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+#logo {
+    display: block;
+    margin: 0 auto;
+    background-color: black;
+    max-width: 150pt;
+    height: auto;
+    padding-bottom: 10pt;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* ABOUT PAGE */
+#aboutContainer {
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+#aboutFeatures {
+    display: flex;
+    justify-content: space-between;
+}
+#feature1,
+#feature2,
+#feature3 {
+    flex: 1;
+    margin: 0 10px;
+}  
+
+/* ------------------------------------------------------------------------------ */
+/* UPLOAD PAGE */
+#uploadForm {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px dotted white;
+    border-radius: 8px;
+    text-align: center;
+}
+#uploadForm input[type="file"],
+#uploadForm input[type="submit"] {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Courier New, monospace;
+    margin-top: 10px;
+}
+#uploadForm input[type="submit"]:hover {
+    background-color: #004280;
+}
+#imageDisplay img {
+    justify-content: center;    
+    max-width: 50%;
+} 
+#imageDisplay {
+    /* display: none; */
+    text-align: center;    
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 80pt;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* CONTACT PAGE */
+.contact-info {
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+.contact-info label {
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    font-family: Courier New, monospace;
+}
+.contact-info input[type="text"],
+.contact-info input[type="email"],
+.contact-info textarea {
+    width: 60%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 10px;
+}
+.contact-info textarea#message {
+    width: 60%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 10px; 
+    height: 150px; 
+}
+.contact-info .submit-container {
+    width: 60%;
+    margin-top: 10px; 
+}
+.contact-info input[type="submit"] {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Courier New, monospace;
+    width: 30%; 
+}
+.contact-info input[type="submit"]:hover {
+    background-color: #004280;
+}
+
+
+
+/* file:///C:/Users/lilyr/OneDrive/Desktop/NotARobot_WebApp/templates/index.html */

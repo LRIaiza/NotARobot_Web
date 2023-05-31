@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:500,900,100,300,700,400|VT323|Overpass+Mono&display=swap">
+      <link rel="stylesheet" href="{{ url_for('static',filename='styles/notARobot.css') }}">
+
+      <img id="logo" src="{{ url_for('static',filename='notARobotLogo.png') }}" alt="logo">
+   </head>
+   <body>
+      <div id="page">
+         <nav class="fill">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="upload.html">Image Detection</a></li>
+               <li><a href="contact.html">Contact</a></li>
+            </ul>
+         </nav>
+         <h1>Deep Fake Detection with Images</h1>
+         <h3>Upload Images Here To Detect Deep Fakes</h3>
+         <div id="uploadPage">
+            <div id="uploadForm">
+               <form action="/uploader" method="POST" enctype="multipart/form-data">
+                  <input type="file" name="file" />
+                  <input type="submit" value="Upload" />
+               </form>
+            </div>  
+         </div>
+         <br><br>
+         <!-- Display the processed image -->
+         <div id="imageDisplay">
+               <img src="{{ url_for('static',filename='processed_image.png') }}" onerror="this.src='static/Your_Image.jpg'">
+         </div>
+      </div>
+   </body>
+   <footer>
+      <div class="footerContainer">
+          <div class="footer-info">
+              <h6>NOT A ROBOT</h6>
+              <p id="footerText">World's leading cutting-edge intelligent deep fake detector</p>
+          </div>
+          <div class="footer-links">
+              <h6>EXPLORE</h6>
+              <ul id="footerLinkText">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="upload.html">Image Detection</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-contact">
+              <h6>CONTACT</h6>
+              <p id="footerText"><a href="https://goo.gl/maps/PkCC26pqUeZbCh6F9">FEIT - UTS, 15 Broadway, Ultimo NSW 2007, Australia</a></p>
+              <p id="footerText"><a href="mailto:notarobot@gmail.com">notarobot@gmail.com</a></p>
+              <p id="footerText"><a href="tel:+61 1234 5678"> +61 1234 5678</a></p>
+          </div>       
+      </div>
+      <p id="copyright">© 2023 Copyright All Rights Reserved Not A Robot</p>
+  </footer>    
+</html>
+
+<!-- <html>
+   <body>
+      <form action = "http://localhost:5000/uploader" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>   
+   </body>
+</html> -->

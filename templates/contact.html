@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:500,900,100,300,700,400|VT323|Overpass+Mono&display=swap">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/notARobot.css') }}">
+
+        <img id="logo" src="{{ url_for('static',filename='notARobotLogo.png') }}" alt="logo">
+    </head>
+    <body>
+		<div id="page">
+			<nav class="fill">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="upload.html">Image Detection</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+			<h1>Contact Us</h1>
+			<div class="contact-info">
+				<p><strong>Name:</strong> Not A Robot</p>
+				<p><strong>Location:</strong> FEIT - UTS, 15 Broadway, Ultimo NSW 2007, Australia</p>
+				<p><strong>Email:</strong> notarobot@gmail.com</p>
+				<p><strong>Phone:</strong> +61 1234 5678</p>
+				<br>
+				<h4>Send us a Message</h4>
+				<div id="contactForm">
+					<form action="/send-message" method="POST">
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name" required>
+
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" required>
+
+						<label for="message">Message:</label>
+						<textarea id="message" name="message" required></textarea>
+						
+                        <div class="submit-container"> 
+                            <input type="submit" value="Send Message">
+                        </div>
+					</form>
+				</div>
+			</div>
+		</div>
+    </body>
+	<footer>
+        <div class="footerContainer">
+            <div class="footer-info">
+                <h6>NOT A ROBOT</h6>
+                <p id="footerText">World's leading cutting-edge intelligent deep fake detector</p>
+            </div>
+            <div class="footer-links">
+                <h6>EXPLORE</h6>
+                <ul id="footerLinkText">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="upload.html">Image Detection</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h6>CONTACT</h6>
+                <p id="footerText"><a href="https://goo.gl/maps/PkCC26pqUeZbCh6F9">FEIT - UTS, 15 Broadway, Ultimo NSW 2007, Australia</a></p>
+                <p id="footerText"><a href="mailto:notarobot@gmail.com">notarobot@gmail.com</a></p>
+                <p id="footerText"><a href="tel:+61 1234 5678"> +61 1234 5678</a></p>
+            </div>       
+        </div>
+        <p id="copyright">© 2023 Copyright All Rights Reserved Not A Robot</p>
+    </footer>    
+</html>

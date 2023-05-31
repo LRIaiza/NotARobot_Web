@@ -1,0 +1,9 @@
+# Usage: pip install -r requirements.txt
+
+# Base ------------------------------------------------------------------------
+opencv-python
+tensorflow
+numpy
+scikit-image 
+flask
+werkzeug
